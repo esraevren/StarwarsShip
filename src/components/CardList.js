@@ -21,7 +21,7 @@ function CardList({ slice, loadMore, loading }) {
             {slice.map((ship, index) => {
               return (
                 <Link key={index} to={`/ship/${index}`} style={linkStyle}>
-                  <div className="card m-2 cursor-pointer border border-gray-400 rounded-lg hover:shadow-md hover:border-opacity-0 transform hover:-translate-y-1 transition-all duration-200">
+                  <div className="card bg-white m-2 cursor-pointer border border-gray-400 rounded-lg hover:shadow-md hover:border-opacity-0 transform hover:-translate-y-1 transition-all duration-200">
                     <div className="m-3">
                       <h2 className="text-lg mb-2">{ship.name}</h2>
                       <p className="font-light font-mono text-sm text-gray-700 hover:text-gray-900 transition-all duration-200">
@@ -33,7 +33,10 @@ function CardList({ slice, loadMore, loading }) {
               );
             })}
           </div>
-          <button className="btn btn-dark d-block w-100" onClick={loadMore}>
+          <button
+            className="bg-white mt-12 btn btn-dark d-block w-32 rounded-lg font-bold shadow-xl hover:bg-black hover:text-white p-2"
+            onClick={loadMore}
+          >
             Load More
           </button>
         </div>
